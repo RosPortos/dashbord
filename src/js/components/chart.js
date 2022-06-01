@@ -8,25 +8,24 @@ function initChart3(id) {
     const myChart2 = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['1d', '2d', '3d', '4d', '5d', '6d', '7d', '8d', "9d", "10d", '11d', '12d', '13d', '14d', '15d', '16d', '17d', '18d', "19d", "20d", '21d', '22d', '23d',],
-            datasets: [
-                {
-                    label: 'Net P/L',
-                    backgroundColor: [
-                        gradient
-                    ],
-                    data: [200, 480, 490, 500, 470, 100, 180, 580, 490, 580, 430, 60, 0, 490, 610, 580, 610, 190, 90, 595, 500, 470, 500,],
-                    borderWidth: 1,
-                    borderColor: '#0094FF',
-                    fill: true,
-                    radius: 0,
-                    hitRadius: 100,
-                    hoverRadius: 6,
-                    hoverBackgroundColor: "#0094FF",
-                    hoverBorderColor: "#fff",
-                    hoverBorderWidth: 2,
-                },
-            ],
+            labels: ['1d', '1d', '1d', '2d', '2d', '2d', '3d', '3d', '3d', '4d', '4d', '4d', '5d', '5d', '5d', '6d', '6d', '6d', '7d', '7d', '7d', '8d', '8d', '8d', '9d', '9d', '9d', '10d', '10d', '10d',],
+            datasets: [{
+                label: 'Net P/L',
+                backgroundColor: [
+                    gradient
+                ],
+                data: [100, 400, 450, 420, 400, 20, 100, 500, 450, 500, 420, 40, 10, 320, 400, 550, 480, 100, 70, 490, 430, 460, 490, 10, 10, 200, 350, 410, 400],
+                                                                                                                         // 21
+                borderWidth: 1,
+                borderColor: '#0094FF',
+                fill: true,
+                radius: 0,
+                hitRadius: 100,
+                hoverRadius: 6,
+                hoverBackgroundColor: "#0094FF",
+                hoverBorderColor: "#fff",
+                hoverBorderWidth: 0,
+            }, ],
         },
         options: {
             /* spanGaps: 1000 * 60 * 60 * 24 * 10, */
@@ -50,8 +49,8 @@ function initChart3(id) {
                     },
                     titleAlign: 'center',
                     caretSize: 0,
-                    backgroundColor: '#242529',
-                    borderColor: '#3042A0',
+                    backgroundColor: "'#242529'",
+                    borderColor: '#3C4254',
                     borderWidth: 1,
                     usePointStyle: true,
                     boxWidth: 0,
@@ -66,7 +65,9 @@ function initChart3(id) {
                                 label += ': ';
                             }
                             if (context.parsed.y !== null) {
-                                label += new Intl.NumberFormat('en-US', { style: 'percent' }).format(context.parsed.y);
+                                label += new Intl.NumberFormat('en-US', {
+                                    style: 'percent'
+                                }).format(context.parsed.y);
                             }
                             return label;
                         }
@@ -78,37 +79,36 @@ function initChart3(id) {
                     grid: {
                         color: '#282C38',
                         tickWidth: 0,
-                        borderDashOffset: 10,
+                        borderWidth: 0,
+                        borderDash: [10, 5]
                     },
                     ticks: {
-                        color: "#B2B2B2",
+                        color: "#3C4254",
                         font: {
                             size: 14,
-
                         },
-                        stepSize: 50,
+                        stepSize: 200,
                         padding: 20,
                     },
                 },
                 x: {
-                    min: 1,
-                    max: 10 * 2,
                     grid: {
                         display: false,
                     },
                     ticks: {
-                        color: "#B2B2B2",
-                        stepSize: 50,
+                        color: "#3C4254",
                         font: {
-                            size: 13,
+                            size: 14,
                         },
-                        padding: 20,
+                        padding: 10,
+                        maxTicksLimit: 10,
+                        stepSize: 3,
                     },
                 },
             },
         },
-    }
-    );
+    });
+
 }
 
 initChart3("graphs");
