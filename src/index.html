@@ -15,7 +15,16 @@
 <body>
 	<div class="page">
 		<div class="page-wrap">
-			@include('partials/nav.html')
+			@include('partials/nav.html', {
+			"nav-item1": "active",
+			"nav-item2": "",
+			"nav-item3": "",
+			"nav-item4": "",
+			"nav-item5": "",
+			"nav-item6": "",
+			"nav-item7": "",
+			"nav-item8": "",
+			})
 
 			<div class="page-center">
 				<div class="chart-wrap">
@@ -176,6 +185,7 @@
 			</div>
 
 			<div class="country-block">
+				<div class="country-block__mob-trigger mob-trigger"></div>
 				<div class="country-block__title">
 					Visits by Location
 				</div>
@@ -483,6 +493,8 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="overley"></div>
 
 		</div>
 

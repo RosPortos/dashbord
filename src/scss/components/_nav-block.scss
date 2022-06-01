@@ -3,6 +3,7 @@
     background: #1E1F25;
     border-radius: 20px;
     @include list-scroll;
+    overflow-x: hidden;
 }
 
 .nav-block-wrap {
@@ -66,7 +67,7 @@
 }
 
 .nav-block-category {
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .nav-block-category__title {
@@ -212,4 +213,8 @@
     .lang-item {
         padding: 7.5px 20px 7.5px 60px;
     }
+}
+
+.header-mob {
+    display: none;
 }
