@@ -1,0 +1,14 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "null";
+@import "global";
+
+// подключения компонентов страницы
+@import "./components/page";
+@import "./components/nav-block";
+@import "./components/chart-wrap";
+@import "./components/country-block";
+@import "./components/balance-wrap";
+@import "./components/table";

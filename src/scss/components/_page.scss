@@ -1,0 +1,17 @@
+.page {}
+
+.page-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.page-center {
+    width: calc(100% - 605px);
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include scroll-hide;
+}

@@ -1,0 +1,23 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #141518;
+
+    &.scroll-hide {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}

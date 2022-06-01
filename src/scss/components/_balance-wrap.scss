@@ -1,0 +1,92 @@
+::root {
+    --val: 50px;
+}
+
+.balance-wrap {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.balance-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #1E1F25;
+    border-radius: 20px;
+
+    .circle {
+        transform: rotate(-90deg);
+    }
+}
+
+.balance-item--blue {
+    .balance-item__price {
+        color: #246CF9;
+    }
+
+    .balance-circle--act {
+        stroke: #246CF9;
+        stroke-dasharray: 75px;
+        stroke-dashoffset: calc(75px - 50px);
+    }
+}
+
+.balance-item--green {
+    .balance-item__price {
+        color: #11CABE;
+    }
+
+    .balance-circle--act {
+        stroke-dasharray: 75px;
+        stroke-dashoffset: calc(75px - 50px);
+    }
+}
+
+.balance-item__info {}
+
+.balance-item__title {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.balance-item__step {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.balance-item__price {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 10px;
+}
+
+.balance-item__circle {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.balance-item__procent {
+    position: absolute;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.balance-circle {}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+	<title>Page</title>
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="page">
+		<div class="page-wrap">
+			@include('partials/nav.html')
+
+			<div class="page-center">
+				<div class="chart-wrap">
+					<div class="chart-wrap-top">
+						<div class="chart-wrap-top__left">
+							<div class="chart-wrap__title">
+								Logs statistic
+							</div>
+							<div class="chart-wrap-top__date">
+								10.06.2022 - 20.06.2022
+							</div>
+						</div>
+						<div class="chart-wrap-top__right">
+							<div class="chart-wrap__period">
+								<span class="period-item period-item--blue">10 days</span>
+								<span class="period-item period-item--red">6 months</span>
+							</div>
+							<div class="chart-wrap-tabs">
+								<button class="chart-wrap-tabs__btn tab-active">10 days</button>
+								<button class="chart-wrap-tabs__btn">6 months</button>
+							</div>
+						</div>
+					</div>
+					<div class="chart">
+						<canvas id="graphs" class="main-graphs"></canvas>
+					</div>
+				</div>
+				<div class="balance-wrap">
+					<div class="balance-item balance-item--blue">
+						<div class="balance-item__info">
+							<div class="balance-item__title">
+								Exchange Balance
+							</div>
+							<div class="balance-item__step">
+								0.213435345
+							</div>
+							<div class="balance-item__price">
+								3,897.98 USD
+							</div>
+						</div>
+						<div class="balance-item__circle">
+							<div class="balance-item__procent">
+								-0.32%
+							</div>
+							<div class="circle">
+								<svg width="75" height="75" viewBox="0 0 120 120">
+									<circle class="balance-circle" cx="60" cy="60" r="54" fill="none" stroke="#282C38"
+										stroke-width="5" pathLength="100" />
+									<circle class="balance-circle balance-circle--act" cx="60" cy="60" r="54"
+										fill="none" stroke="#246CF9" stroke-width="5" pathLength="100" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="balance-item balance-item--green">
+						<div class="balance-item__info">
+							<div class="balance-item__title">
+								Exchange Balance
+							</div>
+							<div class="balance-item__step">
+								0.213435345
+							</div>
+							<div class="balance-item__price">
+								3,897.98 USD
+							</div>
+						</div>
+						<div class="balance-item__circle">
+							<div class="balance-item__procent">
+								-0.32%
+							</div>
+							<div class="circle">
+								<svg width="75" height="75" viewBox="0 0 120 120">
+									<circle class="balance-circle" cx="60" cy="60" r="54" fill="none" stroke="#282C38"
+										stroke-width="5" pathLength="100" />
+									<circle class="balance-circle balance-circle--act" cx="60" cy="60" r="54"
+										fill="none" stroke="#30E0A1" stroke-width="5" pathLength="100" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="table table-main">
+					<div class="table-row table-row--title">
+						<button class="table-item-title">ID</button>
+						<button class="table-item-title">Domain</button>
+						<button class="table-item-title">Device</button>
+						<button class="table-item-title">IP</button>
+						<button class="table-item-title">City</button>
+						<button class="table-item-title">Time</button>
+					</div>
+					<div class="table-wrap">
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+						<div class="table-row">
+							<div class="table-item">64423112</div>
+							<div class="table-item">behance.net</div>
+							<div class="table-item">Iphone 10</div>
+							<div class="table-item">62642:35121</div>
+							<div class="table-item">Berlin</div>
+							<div class="table-item">12:13:57 11/06/2022</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="country-block">
+				<div class="country-block__title">
+					Visits by Location
+				</div>
+				<div class="country-circle-wrap">
+					<div class="country-circle-text">
+						13 countries
+					</div>
+					<div class="circle">
+						<svg width="160" height="160" viewBox="0 0 120 120">
+							<circle class="country-circle country-circle--one" cx="60" cy="60" r="54" fill="none"
+								stroke="#246CF9" stroke-width="5" pathLength="100" />
+							<circle class="country-circle country-circle--two" cx="60" cy="60" r="54" fill="none"
+								stroke="#A276FF" stroke-width="5" pathLength="100" />
+							<circle class="country-circle country-circle--three" cx="60" cy="60" r="54" fill="none"
+								stroke="#FA2256" stroke-width="5" pathLength="100" />
+							<circle class="country-circle country-circle--four" cx="60" cy="60" r="54" fill="none"
+								stroke="#3C4254" stroke-width="5" pathLength="100" />
+							<circle class="country-circle country-circle--five" cx="60" cy="60" r="54" fill="none"
+								stroke="#F9D724" stroke-width="5" pathLength="100" />
+							<circle class="country-circle country-circle--six" cx="60" cy="60" r="54" fill="none"
+								stroke="#24F9F9" stroke-width="5" pathLength="100" />
+						</svg>
+					</div>
+				</div>
+				<div class="country-block__list">
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag1.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								USA
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot dot--red"></span>
+							<span class="country-block-item__procent procent--up">5.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag2.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Canada
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot dot--pink"></span>
+							<span class="country-block-item__procent procent--down">51.2%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag3.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Germany
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot dot--blue"></span>
+							<span class="country-block-item__procent procent--up">17.1%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag4.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Mexico
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot dot--white-blue"></span>
+							<span class="country-block-item__procent procent--down">15.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag5.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								France
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot dot--yellow"></span>
+							<span class="country-block-item__procent procent--up">9.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag1.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								USA
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">5.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag2.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Canada
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--down">51.2%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag3.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Germany
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">17.1%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag4.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Mexico
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--down">15.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag5.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								France
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">9.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag1.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								USA
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">5.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag2.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Canada
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--down">51.2%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag3.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Germany
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">17.1%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag4.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Mexico
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--down">15.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag5.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								France
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">9.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag1.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								USA
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">5.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag2.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Canada
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--down">51.2%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag3.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Germany
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">17.1%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag4.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								Mexico
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--down">15.8%</span>
+						</div>
+					</div>
+					<div class="country-block-item">
+						<div class="country-block-item__left">
+							<div class="country-block-item__flag">
+								<img loading="lazy" src="img/flag5.svg" alt="img">
+							</div>
+							<div class="country-block-item__name">
+								France
+							</div>
+						</div>
+						<div class="country-block-item__right">
+							<span class="country-block-item__dot"></span>
+							<span class="country-block-item__procent procent--up">9.8%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<script src="js/vendor.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
