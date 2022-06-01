@@ -11,8 +11,6 @@
     align-items: center;
 }
 
-.chart-wrap-top__left {}
-
 .chart-wrap__title {
     font-weight: 500;
     font-size: 17px;
@@ -90,8 +88,6 @@
     text-align: center;
     color: #757B8C;
     padding: 5.5px 8px;
-
-
 }
 
 .tab-active {
@@ -100,13 +96,9 @@
 }
 
 .chart {
-
-
     canvas {
         max-height: 100% !important;
         height: 100% !important;
-        height: 400px !important;
+        height: 270px !important;
     }
 }
-
-.main-graphs {}

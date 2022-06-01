@@ -15,3 +15,12 @@
     justify-content: space-between;
     @include scroll-hide;
 }
+
+.page-right {
+    width: calc(100% - 280px);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    @include scroll-hide;
+    overflow-y: auto;
+}

@@ -1,7 +1,3 @@
-::root {
-    --val: 50px;
-}
-
 .balance-wrap {
     margin-top: 25px;
     display: grid;
@@ -46,7 +42,12 @@
     }
 }
 
-.balance-item__info {}
+.balance-item__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .balance-item__title {
     font-weight: 600;

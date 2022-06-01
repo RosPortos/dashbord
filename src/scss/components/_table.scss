@@ -2,6 +2,28 @@
     margin-top: 25px;
     background: #1E1F25;
     border-radius: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        height: 10px;
+        width: 5px;
+        background-color: rgba(140, 140, 140, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #246CF9;
+        border-radius: 6px;
+    }
+}
+
+.table-mob {
+    min-width: 100%;
 }
 
 
@@ -17,9 +39,29 @@
     }
 }
 
+.table-h {
+    height: calc(100% - 120px);
+
+    .table-wrap {
+        max-height: calc(100% - 60px);
+    }
+}
+
 .table-main {
     .table-row {
         grid-template-columns: 80px 90px 80px 90px 60px 120px;
+    }
+}
+
+.table-logs {
+    .table-row {
+        grid-template-columns: 80px 95px 60px 80px 90px 150px 140px;
+    }
+}
+
+.table-active-members {
+    .table-row {
+        grid-template-columns: 80px 95px 90px 100px 140px 130px 140px;
     }
 }
 
@@ -65,12 +107,20 @@
     font-size: 12px;
     line-height: 15px;
     color: #757B8C;
+
+    &.text-center {
+        text-align: center;
+        padding-right: 25px;
+    }
 }
 
 .table-wrap {
     max-height: 300px;
     overflow-y: auto;
     @include list-scroll;
+    overflow-x: hidden;
+    width: fit-content;
+    min-width: 100%;
 
     &::-webkit-scrollbar {
         width: 2px;
