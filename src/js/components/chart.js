@@ -1,77 +1,86 @@
 function initChart3(id) {
     const ctx = document.getElementById(id).getContext('2d');
-
     let gradient = ctx.createLinearGradient(0, 0, 0, 0);
-    gradient.addColorStop(0.2, "rgba(0, 148, 255, 0)");
-    gradient.addColorStop(1, "rgba(0, 148, 255, 0)");
 
     const myChart2 = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['1d', '1d', '1d', '2d', '2d', '2d', '3d', '3d', '3d', '4d', '4d', '4d', '5d', '5d', '5d', '6d', '6d', '6d', '7d', '7d', '7d', '8d', '8d', '8d', '9d', '9d', '9d', '10d', '10d', '10d',],
+            labels: ['1d', '1d', '1d', '2d', '2d', '2d', '3d', '3d', '3d', '4d', '4d', '4d', '5d', '5d', '5d', '6d', '6d', '6d', '7d', '7d', '7d', '8d', '8d', '8d', '9d', '9d', '9d', '10d', '10d', '10d', ],
             datasets: [{
-                label: 'Net P/L',
                 backgroundColor: [
                     gradient
                 ],
                 data: [100, 400, 450, 420, 400, 20, 100, 500, 450, 500, 420, 40, 10, 320, 400, 550, 480, 100, 70, 490, 430, 460, 490, 10, 10, 200, 350, 410, 400],
-                                                                                                                         // 21
+                // 21
                 borderWidth: 1,
                 borderColor: '#0094FF',
-                fill: true,
                 radius: 0,
-                hitRadius: 100,
-                hoverRadius: 6,
+                hitRadius: 20,
+                hoverRadius: 7,
                 hoverBackgroundColor: "#0094FF",
-                hoverBorderColor: "#fff",
                 hoverBorderWidth: 0,
             }, ],
         },
         options: {
             /* spanGaps: 1000 * 60 * 60 * 24 * 10, */
             responsive: true,
-            interaction: {
-                mode: 'index',
-            },
+
             plugins: {
                 legend: {
                     display: false,
                 },
-
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
+                tooltip: {
                     padding: {
-                        left: 15,
-                        top: 15,
-                        right: 15,
-                        bottom: 15
+                        left: 20,
+                        top: 20,
+                        right: 20,
+                        bottom: 20
                     },
-                    titleAlign: 'center',
-                    caretSize: 0,
-                    backgroundColor: "'#242529'",
-                    borderColor: '#3C4254',
+                    backgroundColor: 'rgba(60, 66, 84, 0.5)',
                     borderWidth: 1,
+                    borderColor: "#3C4254",
+                    caretSize: 0,
                     usePointStyle: true,
-                    boxWidth: 0,
                     callbacks: {
-                        labelTextColor: function (context) {
-                            return '#fff';
-                        },
                         label: function (context) {
                             let label = context.dataset.label || '';
+                            let index = context.dataIndex - 1;
+                            let precent;
 
-                            if (label) {
-                                label += ': ';
+                            if (index >= 0) {
+                                let prevNum = context.dataset.data[index];
+                                let currentNum = context.parsed.y;
+
+                                if (prevNum <= currentNum) {
+                                    precent = (((currentNum - prevNum) / prevNum) * 100 ).toFixed(2) + "%";
+                                } else if (prevNum > currentNum) {
+                                    precent = -(((prevNum - currentNum) / prevNum) * 100).toFixed(2) + "%";
+                                }
                             }
-                            if (context.parsed.y !== null) {
-                                label += new Intl.NumberFormat('en-US', {
-                                    style: 'percent'
-                                }).format(context.parsed.y);
-                            }
-                            return label;
+
+                            /*  if (label) {
+                                 label += ': ';
+                             }
+                             if (context.parsed.y !== null) {
+                                 label += new Intl.NumberFormat('en-US', { style: 'percent', }).format(context.parsed.y);
+                             } */
+                            return precent;
+                        },
+                        labelColor: function (context) {
+                            return {
+                                borderColor: '#11CABE',
+                                backgroundColor: '#11CABE',
+                                borderWidth: 0,
+                            };
+                        },
+
+                        labelPointStyle: function (context) {
+                            return {
+                                pointStyle: 'triangle',
+                                rotation: 0
+                            };
                         }
-                    },
+                    }
                 },
             },
             scales: {
@@ -108,7 +117,6 @@ function initChart3(id) {
             },
         },
     });
-
 }
 
 initChart3("graphs");
