@@ -51,6 +51,53 @@
     }
 }
 
+.input-wrap {
+    input {
+        background: #20232B;
+        border: 1px solid #3C4254;
+        border-radius: 10px;
+        height: 50px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
+        padding: 0 20px;
+        width: 100%;
+
+        &::placeholder {
+            color: #757B8C;
+        }
+    }
+}
+
+.wrap-input-btn {
+    position: relative;
+
+    input {
+        padding-right: 150px;
+    }
+}
+
+.btn-random {
+    position: absolute;
+    background: #246CF9;
+    border-radius: 0px 10px 10px 0px;
+    right: 0;
+    width: 129px;
+    height: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+
+    @media(any-hover: hover) {
+        &:hover {
+            background: #4a84f8;
+        }
+    }
+}
+
 .length-item {
     position: absolute;
     right: 15px;

@@ -6,7 +6,7 @@ function initChart3(id) {
     const myChart2 = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['1d', '1d', '1d', '2d', '2d', '2d', '3d', '3d', '3d', '4d', '4d', '4d', '5d', '5d', '5d', '6d', '6d', '6d', '7d', '7d', '7d', '8d', '8d', '8d', '9d', '9d', '9d', '10d', '10d', '10d', ],
+            labels: ['1d', '1d', '1d', '2d', '2d', '2d', '3d', '3d', '3d', '4d', '4d', '4d', '5d', '5d', '5d', '6d', '6d', '6d', '7d', '7d', '7d', '8d', '8d', '8d', '9d', '9d', '9d', '10d', '10d', '10d',],
             datasets: [{
                 backgroundColor: [
                     gradient

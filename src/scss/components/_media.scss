@@ -150,8 +150,6 @@
         position: relative;
         right: initial;
         top: inherit;
-        margin-left: 0;
-        margin-right: 10px;
     }
 
     .page-wrap {
@@ -162,7 +160,6 @@
         background-color: transparent;
         width: fit-content;
         padding: 0;
-        flex-direction: row-reverse;
     }
 
     .logo {
@@ -207,8 +204,39 @@
         display: none;
     }
 
-    .chart-wrap {
-        display: none;
+    .chart-wrap-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chart-wrap-top__left {
+        margin-bottom: 20px;
+    }
+
+    .chart-wrap-top__right {
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .chart-wrap__period {
+        margin-top: 10px;
+    }
+
+    .chart-wrap-top__left {
+        display: flex;
+        width: 100%;
+    }
+
+    .chart-wrap-tabs {
+        height: fit-content;
+        margin-left: auto;
+        flex-direction: column;
+    }
+
+    .chart-wrap-tabs__btn {
+        width: 100%;
     }
 
     .sms-form .select-wrap {
@@ -233,5 +261,38 @@
 
     .btn {
         padding: 15px;
+    }
+
+    .nav-block-profile {
+        flex-direction: row-reverse;
+    }
+
+    .nav-block-profile__btn {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .add-domain {
+        width: 100%;
+    }
+
+    .modal {
+        min-width: 90%;
+    }
+
+    .btn-random {
+        width: 80px;
+    }
+
+    .wrap-input-btn input {
+        padding-right: 100px;
+    }
+
+    .modal-form>div {
+        margin-bottom: 20px;
+    }
+
+    .modal__body {
+        padding-top: 60px;
     }
 }

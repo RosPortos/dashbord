@@ -4,7 +4,7 @@
     border-radius: 20px;
     @include list-scroll;
     overflow-x: hidden;
-    max-height: 850px;
+    max-height: 920px;
 }
 
 .nav-block-wrap {
@@ -12,7 +12,7 @@
     flex-direction: column;
     height: 100%;
 
-    max-height: 848px;
+    max-height: 919px;
     height: calc(100vh - 50px);
     width: 250px;
 }
