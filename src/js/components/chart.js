@@ -40,7 +40,6 @@ function initChart3(id) {
                     borderColor: "#3C4254",
                     caretSize: 0,
                     usePointStyle: true,
-                    bodyColor: "#11CABE",
                     callbacks: {
                         label: function (context) {
                             let index = context.dataIndex - 1;
@@ -99,6 +98,21 @@ function initChart3(id) {
                                 pointStyle: 'circle',
                                 rotation: 0
                             };
+                        },
+
+                        labelTextColor: function (context) {
+                            let index = context.dataIndex - 1;
+
+                            if (index >= 0) {
+                                let prevNum = context.dataset.data[index];
+                                let currentNum = context.parsed.y;
+
+                                if (prevNum <= currentNum) {
+                                    return "#11CABE";
+                                } else if (prevNum > currentNum) {
+                                    return "#FA2256";
+                                }
+                            }
                         },
 
                         title: function (context) {
