@@ -33,6 +33,7 @@
     padding: 20px 25px;
     display: grid;
     justify-content: space-between;
+    align-items: center;
     column-gap: 10px;
 
     &:nth-child(odd) {
@@ -79,6 +80,57 @@
 .table-accruals {
     .table-row {
         grid-template-columns: 80px 80px 100px 90px 140px;
+    }
+}
+
+.table-domains {
+    margin-top: 15px;
+
+    .table-row {
+        grid-template-columns: 90px 80px 90px 90px 170px 30px;
+    }
+
+    .table-row {
+        padding: 15px 65px 15px 25px;
+    }
+
+    .table-row--title {
+        padding: 20px 65px 20px 25px;
+    }
+}
+
+.add-domain {
+    width: 210px;
+    margin-left: auto;
+}
+
+.settings-btn {
+    background: #246CF9;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../img/settings.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 14px;
+        height: 14px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media(any-hover: hover) {
+        &:hover {
+            background: #4a84f8;
+        }
+
+
     }
 }
 
