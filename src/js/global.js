@@ -21,4 +21,15 @@ document.addEventListener('DOMContentLoaded', function () {
         $('body').toggleClass('scroll-hide');
     });
 
+
+    const ta = document.querySelector('.textarea');
+    const counter = document.querySelector('.length-item__num');
+
+    ta.addEventListener('input', onInput);
+
+    function onInput(evt) {
+        const length = evt.target.value.length;
+        counter.textContent = length;
+    }
+
 });

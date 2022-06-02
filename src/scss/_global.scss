@@ -16,11 +16,7 @@ body {
     padding: 0 15px;
 }
 
-.page {
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
-}
+
 
 .search {
     width: 100%;
@@ -132,5 +128,26 @@ body {
     &.active {
         opacity: 1;
         pointer-events: all;
+    }
+}
+
+.btn {
+    background: #246CF9;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    transition: all 0.3s ease-in-out;
+
+    @media(any-hover: hover) {
+        &:hover {
+            background: #4a84f8;
+        }
     }
 }

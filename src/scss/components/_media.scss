@@ -24,6 +24,8 @@
     .page-right {
         width: calc(100% - 230px);
     }
+
+
 }
 
 @media (max-width: 1180px) {
@@ -41,6 +43,7 @@
         overflow-x: visible;
         transform: translateX(-100%);
         transition: all 0.3s ease-in-out;
+        max-height: inherit;
 
         &.active {
             transform: translateX(0);
@@ -147,6 +150,8 @@
         position: relative;
         right: initial;
         top: inherit;
+        margin-left: 0;
+        margin-right: 10px;
     }
 
     .page-wrap {
@@ -157,6 +162,7 @@
         background-color: transparent;
         width: fit-content;
         padding: 0;
+        flex-direction: row-reverse;
     }
 
     .logo {
@@ -176,6 +182,15 @@
         height: auto;
         overflow-y: visible;
     }
+
+    .page-right.page-right--small {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .sms-form {
+        padding-top: 0;
+    }
 }
 
 @media (max-width: 680px) {
@@ -194,5 +209,29 @@
 
     .chart-wrap {
         display: none;
+    }
+
+    .sms-form .select-wrap {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sms-form__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sms-form__btn {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .textarea-wrap {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 15px;
     }
 }

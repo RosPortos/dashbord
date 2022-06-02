@@ -1,0 +1,129 @@
+.sms-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-bottom: 50px;
+
+    .select-wrap {
+        width: calc(50% - 15px);
+        margin-bottom: 30px;
+    }
+}
+
+
+.form-item-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.textarea-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+
+
+    textarea {
+        background: #1D1F25;
+        border: 1px solid #3C4254;
+        border-radius: 10px;
+        width: 100%;
+        height: 145px;
+        padding: 15px 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
+        resize: none;
+
+        &::placeholder {
+            color: #757B8C;
+        }
+    }
+
+    &.textarea-file {
+        textarea {
+            padding-bottom: 45px;
+        }
+    }
+}
+
+.length-item {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    div {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #757B8C;
+    }
+}
+
+.input-file {
+    background: #246CF9;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    @media(any-hover: hover) {
+        &:hover {
+            background: #4a84f8;
+        }
+    }
+}
+
+.sms-form__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.sms-form__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #246CF9;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: #4f88fb;
+        text-decoration-line: underline;
+    }
+}
+
+.sms-form__btn {
+    width: 210px;
+    margin-left: 30px;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Page</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrap">
+            @include('partials/nav.html', {
+            "nav-item1": "",
+            "nav-item2": "",
+            "nav-item3": "",
+            "nav-item4": "active",
+            "nav-item5": "",
+            "nav-item6": "",
+            "nav-item7": "",
+            "nav-item8": "",
+            })
+
+            <div class="page-right page-right--small">
+
+                <form class="sms-form">
+                    <div class="select-wrap">
+                        <div class="form-item-title">
+                            Отправитель
+                        </div>
+                        <div class="select">
+                            <label class="select__top">
+                                <input class="select__main-input" type="text" placeholder="Type here..." name="select"
+                                    readonly>
+                            </label>
+                            <div class="select__content">
+                                <label class="select__content-item">
+                                    <input class="select__content-input" type="radio" name="SelectItem">
+                                    <div class="select__content-box">
+                                        <p class="select__content-name">Lorem</p>
+                                    </div>
+                                </label>
+                                <label class="select__content-item">
+                                    <input class="select__content-input" type="radio" name="SelectItem">
+                                    <div class="select__content-box">
+                                        <p class="select__content-name">Lorem2</p>
+                                    </div>
+                                </label>
+                                <label class="select__content-item">
+                                    <input class="select__content-input" type="radio" name="SelectItem">
+                                    <div class="select__content-box">
+                                        <p class="select__content-name">Lorem3</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-wrap">
+                        <div class="form-item-title">
+                            Выбор страны
+                        </div>
+                        <div class="select">
+                            <label class="select__top">
+                                <input class="select__main-input" type="text" placeholder="Select here..." name="select"
+                                    readonly>
+                            </label>
+                            <div class="select__content">
+                                <label class="select__content-item">
+                                    <input class="select__content-input" type="radio" name="SelectCountry">
+                                    <div class="select__content-box">
+                                        <p class="select__content-name">Lorem</p>
+                                    </div>
+                                </label>
+                                <label class="select__content-item">
+                                    <input class="select__content-input" type="radio" name="SelectCountry">
+                                    <div class="select__content-box">
+                                        <p class="select__content-name">Lorem2</p>
+                                    </div>
+                                </label>
+                                <label class="select__content-item">
+                                    <input class="select__content-input" type="radio" name="SelectCountry">
+                                    <div class="select__content-box">
+                                        <p class="select__content-name">Lorem3</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textarea-wrap textarea-file">
+                        <div class="form-item-title">
+                            Получатель
+                        </div>
+                        <textarea placeholder="Type here..."></textarea>
+                        <div class="input-file">
+                            <span>Загрузить из файла</span>
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="textarea-wrap">
+                        <div class="form-item-title">
+                            Текст
+                        </div>
+                        <textarea class="textarea" maxlength="765" placeholder="Type here..."></textarea>
+                        <div class="length-item">
+                            <div class="length-item__num">0</div>
+                            <div class="length-item__max">/765</div>
+                        </div>
+                    </div>
+                    <div class="sms-form__bottom">
+                        <a href="#" class="sms-form__link">
+                            Правила использования сервиса
+                        </a>
+                        <button class="sms-form__btn btn">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+
+                <form action="#" class="search">
+                    <input type="text" placeholder="Type to search...">
+                    <buuton class="search-btn"></buuton>
+                </form>
+
+                <div class="table table-sms">
+                    <div class="table-row table-row--title">
+                        <button class="table-item-title">ID</button>
+                        <button class="table-item-title">Sender</button>
+                        <button class="table-item-title">Total / Sent / Delivered</button>
+                        <button class="table-item-title">Status</button>
+                        <button class="table-item-title">Time</button>
+                    </div>
+                    <div class="table-wrap">
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item green-text">Status 1</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item yellow-text">Status 2</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item red-text">Status 3</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item green-text">Status 1</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item yellow-text">Status 2</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item red-text">Status 3</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item green-text">Status 1</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item yellow-text">Status 2</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-item">64423112</div>
+                            <div class="table-item">Name Surname</div>
+                            <div class="table-item text-center">13 / 12 / 3</div>
+                            <div class="table-item red-text">Status 3</div>
+                            <div class="table-item">12:13:57 11/06/2022</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <span class="pagination-item pagination-item--active">1</span>
+                    <a href="#" class="pagination-item">2</a>
+                    <a href="#" class="pagination-item">3</a>
+                    <a href="#" class="pagination-item">...</a>
+                    <a href="#" class="pagination-item">12</a>
+                </div>
+            </div>
+
+            <div class="overley"></div>
+
+        </div>
+
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

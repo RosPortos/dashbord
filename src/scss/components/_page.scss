@@ -1,4 +1,8 @@
-.page {}
+.page {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
 
 .page-wrap {
     display: flex;
@@ -23,4 +27,11 @@
     height: calc(100vh - 50px);
     @include scroll-hide;
     overflow-y: auto;
+
+    &.page-right--small {
+        max-width: 880px;
+        margin-right: auto;
+        margin-left: 40px;
+        height: auto;
+    }
 }
