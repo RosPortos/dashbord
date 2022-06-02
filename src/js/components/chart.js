@@ -10,7 +10,7 @@ function initChart3(id) {
                 backgroundColor: [
                     gradient
                 ],
-                data: [100, 400, 450, 420, 400, 20, 100, 500, 450, 500, 420, 40, 10, 320, 400, 550, 480, 100, 70, 490, 430, 460, 490, 10, 10, 200, 350, 410, 400],
+                data: [100, 400, 450, 420, 400, 60, 100, 500, 450, 500, 420, 80, 50, 320, 400, 550, 480, 100, 70, 490, 430, 460, 490, 60, 60, 200, 350, 410, 400],
                 // 21
                 borderWidth: 1,
                 borderColor: '#0094FF',
@@ -43,7 +43,6 @@ function initChart3(id) {
                     usePointStyle: true,
                     callbacks: {
                         label: function (context) {
-                            let label = context.dataset.label || '';
                             let index = context.dataIndex - 1;
                             let precent;
 
@@ -52,18 +51,13 @@ function initChart3(id) {
                                 let currentNum = context.parsed.y;
 
                                 if (prevNum <= currentNum) {
-                                    precent = (((currentNum - prevNum) / prevNum) * 100 ).toFixed(2) + "%";
+                                    precent = (((currentNum - prevNum) / prevNum) * 1 ).toFixed(2) + "%";
                                 } else if (prevNum > currentNum) {
-                                    precent = -(((prevNum - currentNum) / prevNum) * 100).toFixed(2) + "%";
+                                    precent = -(((prevNum - currentNum) / prevNum) * 1).toFixed(2) + "%";
                                 }
+                            } else {
+                                precent = "0%";
                             }
-
-                            /*  if (label) {
-                                 label += ': ';
-                             }
-                             if (context.parsed.y !== null) {
-                                 label += new Intl.NumberFormat('en-US', { style: 'percent', }).format(context.parsed.y);
-                             } */
                             return precent;
                         },
                         labelColor: function (context) {
