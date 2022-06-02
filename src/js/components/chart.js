@@ -1,6 +1,7 @@
 function initChart3(id) {
     const ctx = document.getElementById(id).getContext('2d');
     let gradient = ctx.createLinearGradient(0, 0, 0, 0);
+    let yourImage = new Image();
 
     const myChart2 = new Chart(ctx, {
         type: 'line',
@@ -11,7 +12,6 @@ function initChart3(id) {
                     gradient
                 ],
                 data: [100, 400, 450, 420, 400, 60, 100, 500, 450, 500, 420, 80, 50, 320, 400, 550, 480, 100, 70, 490, 430, 460, 490, 60, 60, 200, 350, 410, 400],
-                // 21
                 borderWidth: 1,
                 borderColor: '#0094FF',
                 radius: 0,
@@ -19,12 +19,11 @@ function initChart3(id) {
                 hoverRadius: 7,
                 hoverBackgroundColor: "#0094FF",
                 hoverBorderWidth: 0,
-            }, ],
+            }],
         },
-        options: {
-            /* spanGaps: 1000 * 60 * 60 * 24 * 10, */
-            responsive: true,
 
+        options: {
+            responsive: true,
             plugins: {
                 legend: {
                     display: false,
@@ -41,6 +40,7 @@ function initChart3(id) {
                     borderColor: "#3C4254",
                     caretSize: 0,
                     usePointStyle: true,
+                    bodyColor: "#11CABE",
                     callbacks: {
                         label: function (context) {
                             let index = context.dataIndex - 1;
@@ -50,13 +50,15 @@ function initChart3(id) {
                                 let prevNum = context.dataset.data[index];
                                 let currentNum = context.parsed.y;
 
-                                if (prevNum <= currentNum) {
-                                    precent = (((currentNum - prevNum) / prevNum) * 1 ).toFixed(2) + "%";
+                                if (prevNum < currentNum) {
+                                    precent = " " + (((currentNum - prevNum) / prevNum) * 1).toFixed(2) + "%";
                                 } else if (prevNum > currentNum) {
-                                    precent = -(((prevNum - currentNum) / prevNum) * 1).toFixed(2) + "%";
+                                    precent = " " + -(((prevNum - currentNum) / prevNum) * 1).toFixed(2) + "%";
+                                } else {
+                                    precent = " 0%";
                                 }
                             } else {
-                                precent = "0%";
+                                precent = " 0%";
                             }
                             return precent;
                         },
@@ -65,17 +67,53 @@ function initChart3(id) {
                                 borderColor: '#11CABE',
                                 backgroundColor: '#11CABE',
                                 borderWidth: 0,
+                                padding: 20,
+                            };
+                        },
+                        labelPointStyle: function (context) {
+                            let index = context.dataIndex - 1;
+
+                            if (index >= 0) {
+                                let prevNum = context.dataset.data[index];
+                                let currentNum = context.parsed.y;
+
+                                if (prevNum < currentNum) {
+                                    yourImage.src = 'img/chart-up.svg';
+
+                                    return {
+                                        pointStyle: yourImage,
+                                        rotation: 0
+                                    };
+                                } else if (prevNum > currentNum) {
+                                    yourImage.src = 'img/chart-down.svg';
+
+                                    return {
+                                        pointStyle: yourImage,
+                                        rotation: 0,
+                                    };
+                                }
+                            }
+
+                            return {
+                                padding: 10,
+                                pointStyle: 'circle',
+                                rotation: 0
                             };
                         },
 
-                        labelPointStyle: function (context) {
-                            return {
-                                pointStyle: 'triangle',
-                                rotation: 0
-                            };
+                        title: function (context) {
+                            let currentDay = parseInt(context[0].label);
+
+                            if (currentDay == 1) {
+                                return currentDay + "  day";
+                            } else {
+                                return currentDay + "  days";
+                            }
                         }
-                    }
+                    },
+
                 },
+
             },
             scales: {
                 y: {
