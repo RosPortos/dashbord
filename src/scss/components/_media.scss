@@ -209,6 +209,48 @@
     .settings__list {
         max-width: 600px;
     }
+
+    .login {
+        flex-direction: column-reverse;
+    }
+
+    .login__title {
+        font-size: 36px;
+    }
+
+    .login__planet-img::before {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media(max-width:767px) {
+    .login__planet-img::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .login {
+        justify-content: flex-end;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+    }
+
+    .login__logo {
+        left: 20px;
+        right: 20px;
+    }
+
+    .login__logo img {
+        display: block;
+        width: 181.2px;
+        height: 29px;
+    }
 }
 
 @media (max-width: 680px) {
@@ -276,5 +318,10 @@
     .table-settings .table-row {
         padding-right: 10px;
         padding-left: 20px;
+    }
+
+    .login__title {
+        font-size: 26px;
+        margin-bottom: 20px;
     }
 }
