@@ -82,6 +82,22 @@
     }
 }
 
+.table-settings {
+    min-height: unset;
+    max-height: 574px;
+    height: 100%;
+
+    .table-wrap {
+        max-height: 519px;
+    }
+
+    .table-row {
+        grid-template-columns: 80px 140px;
+        padding-right: 110px;
+        padding-left: 116px;
+    }
+}
+
 .table-row--title {
     background: #1E1F25 !important;
     border-radius: 20px 20px 0 0;
