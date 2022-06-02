@@ -408,6 +408,8 @@
     align-items: center;
     padding: 5px 13px 17.5px;
     width: fit-content;
+    will-change: transform;
+
 
     background-image: url("../img/tooltip.svg");
     background-size: contain;

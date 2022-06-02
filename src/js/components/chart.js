@@ -1,8 +1,8 @@
 function initChart3(id) {
-    const ctx = document.getElementById(id);
+    let ctx = document.getElementById(id);
 
     if (ctx) {
-        ctx.getContext('2d');
+        ctx = ctx.getContext('2d');
         let gradient = ctx.createLinearGradient(0, 0, 0, 0);
         let yourImage = new Image();
 
