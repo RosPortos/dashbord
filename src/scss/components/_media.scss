@@ -364,8 +364,12 @@
     }
 
     .settings__requisites .select {
-        width: 167px;
-        min-width: 167px;
+        width: 180px;
+        min-width: 180px;
+    }
+
+    .settings__requisites .settings__input {
+        min-width: 128px;
     }
 
     .settings__title {
