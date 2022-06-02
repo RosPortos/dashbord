@@ -194,6 +194,7 @@
     right: 123px;
     transform: translateY(-50%); */
 
+
     @media(max-width:1439px) {
         width: 455px;
         height: 453px;
@@ -414,6 +415,7 @@
     background-image: url("../img/tooltip.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    will-change: transform;
 
     &--one {
         position: absolute;
